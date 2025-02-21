@@ -1,0 +1,35 @@
+.navbar {
+    border-bottom: 0.05rem solid black;
+    flex: 0 0 10%;
+}
+
+.navbar > ul {
+    height: 100%;
+    list-style-type:  none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.navbar > ul > li {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    all: unset;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.element {
+    font-size: 1.2rem;
+}
+
+.logo {
+    color: #DB17A1;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Lepka', sans-serif;
+}

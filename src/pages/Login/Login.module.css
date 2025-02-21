@@ -1,0 +1,32 @@
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #DB17A1;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow: hidden;
+}
+
+.login-block, .registration-block {
+    flex: 50%;
+}
+
+.login-block {
+
+}
+
+.registration-block {
+
+}
+
+.active-block {
+    background-color: white;
+}

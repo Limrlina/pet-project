@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Lepka';
+    src: url('../assets/fonts/lepka.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Racama';
+    src: url('../assets/fonts/racama.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
