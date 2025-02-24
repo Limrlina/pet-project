@@ -6,27 +6,70 @@
 }
 
 .form-container {
-    background-color: #DB17A1;
-    width: 50rem;
+    background-color: #1871DB;
+    width: 55rem;
     height: 30rem;
-    border-radius: 2rem;
+    border-radius: 3rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .login-block, .registration-block {
     flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.login-block {
-
-}
-
-.registration-block {
-
-}
-
-.active-block {
+.slice-block {
+    position: absolute;
     background-color: white;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: 100%;
+    transition: left .5s ease-in-out;
+}
+
+.slice-block.left {
+    left: 0;
+}
+
+.slice-block.right {
+    left: 50%;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0.5rem;
+}
+
+.btn-container-header {
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.change-form-btn {
+    border: none;
+    cursor: pointer;
+    width: 12rem;
+    height: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    transition: background-color .2s ease-out, color .1s ease-out;
+}
+
+.change-form-btn:hover {
+    background-color: #DB17A1;
+    color: white;
+}
+
+.btn-container-subheader {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
 }
