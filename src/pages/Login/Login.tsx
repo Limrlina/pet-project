@@ -3,19 +3,21 @@ import { useEffect, useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm.tsx";
 import RegisterForm from "../../components/RegisterForm/RegisterForm.tsx";
 import clsx from "clsx";
+import { useAuth } from "../../contexts/AuthContext.tsx";
 
 const Login = () => {
   const [loginActive, setLoginActive] = useState(true);
+  const { setStatus } = useAuth();
 
   useEffect(() => {
-    console.log(window.innerWidth);
-    if (window.innerWidth < 500) {
-      document.body.style.overflow = "hidden";
+    setStatus("signing-in");
 
-      return () => {
-        document.body.style.overflow = "";
-      };
-    }
+    if (window.innerWidth < 500) document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "visible";
+      setStatus("unauthenticated");
+    };
   }, []);
 
   return (

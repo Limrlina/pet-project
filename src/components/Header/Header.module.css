@@ -8,28 +8,57 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
 }
 
 .navbar > ul > li {
     display: flex;
+    width: 30%;
     align-items: center;
+}
+
+.left, .right, .center {
+    justify-content: center;
 }
 
 .link {
     all: unset;
     cursor: pointer;
-    padding: 0 0.5rem;
 }
 
 .element {
     font-size: 1.2rem;
 }
 
+
 .logo {
     color: #DB17A1;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-family: 'Lepka', sans-serif;
+}
+
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .left {
+        justify-content: start;
+        padding-left: 2rem;
+    }
+
+    .right {
+        justify-content: end;
+        padding-right: 2rem;
+    }
+
+    .center {
+        justify-content: center;
+    }
+
+    .element {
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
 }
