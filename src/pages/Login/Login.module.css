@@ -1,6 +1,6 @@
 :root {
-    --form-width-on-desktop: 70%;
-    --btn-container-width-on-desktop: 30%;
+    --form-width-on-desktop: 60%;
+    --btn-container-width-on-desktop: 40%;
 
     --form-height-on-mobile: 90%;
     --btn-height-width-on-mobile: 10%;
@@ -16,7 +16,7 @@
 .form-container {
     margin: 1rem;
     background-color: #1871DB;
-    width: 55rem;
+    width: 50rem;
     height: 30rem;
     border-radius: 3rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -234,6 +234,14 @@
 }
 
 /* iPhone (альбомный режим) */
-@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 926px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 926px) {
+    .form-container {
+        width: 40rem;
+        height: 20rem;
+        font-size: 1rem;
+    }
 
+    .change-form-btn {
+        width: 80%;
+    }
 }

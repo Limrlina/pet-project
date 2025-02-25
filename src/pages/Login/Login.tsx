@@ -8,11 +8,14 @@ const Login = () => {
   const [loginActive, setLoginActive] = useState(true);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    console.log(window.innerWidth);
+    if (window.innerWidth < 500) {
+      document.body.style.overflow = "hidden";
 
-    return () => {
-      document.body.style.overflow = "";
-    };
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
   }, []);
 
   return (
@@ -30,9 +33,7 @@ const Login = () => {
           </div>
         )) || (
           <div className={styles["btn-container"]}>
-            <p className={styles["btn-container-header"]}>
-              Уже зарегистрированы?
-            </p>
+            <p className={styles["btn-container-header"]}>Есть аккаунт?</p>
             <button
               className={styles["change-form-btn"]}
               onClick={() => setLoginActive(!loginActive)}
@@ -47,9 +48,7 @@ const Login = () => {
           </div>
         )) || (
           <div className={styles["btn-container"]}>
-            <p className={styles["btn-container-header"]}>
-              Ещё не зарегистрированы?
-            </p>
+            <p className={styles["btn-container-header"]}>Нет аккаунта?</p>
             <div>
               <p className={styles["btn-container-subheader"]}>
                 Зарегистрируйтесь, чтобы получить возможность оформлять заказы

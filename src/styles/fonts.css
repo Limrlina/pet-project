@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Lepka';
-    src: url('../assets/fonts/lepka.otf') format('otf');
+    src: url('../assets/fonts/lepka.otf') format('otf'),
+    url('../assets/fonts/lepka.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
