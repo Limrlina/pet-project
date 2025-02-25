@@ -1,11 +1,20 @@
+:root {
+    --form-width-on-desktop: 70%;
+    --btn-container-width-on-desktop: 30%;
+
+    --form-height-on-mobile: 90%;
+    --btn-height-width-on-mobile: 10%;
+}
+
 .container {
-    flex: 1;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .form-container {
+    margin: 1rem;
     background-color: #1871DB;
     width: 55rem;
     height: 30rem;
@@ -17,7 +26,7 @@
 }
 
 .login-block, .registration-block {
-    flex: 50%;
+    flex: var(--form-width-on-desktop);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,26 +35,61 @@
 .slice-block {
     position: absolute;
     background-color: white;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    width: 50%;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
     height: 100%;
-    transition: left .5s ease-in-out;
+    border-radius: 3rem;
 }
 
 .slice-block.left {
-    left: 0;
+    animation: goLeft .7s ease-out forwards;
 }
 
 .slice-block.right {
-    left: 50%;
+    animation: goRight .7s ease-out forwards;
+}
+
+@keyframes goLeft {
+    0% {
+        width: var(--form-width-on-desktop);
+        left: var(--btn-container-width-on-desktop);
+    }
+
+    50% {
+        left: 0;
+        width: 100%;
+    }
+
+    100% {
+        width: var(--form-width-on-desktop);
+    }
+}
+
+@keyframes goRight {
+    0% {
+        width: var(--form-width-on-desktop);
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        left: var(--btn-container-width-on-desktop);
+        width: var(--form-width-on-desktop);
+    }
 }
 
 .btn-container {
+    width: var(--btn-container-width-on-desktop);
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
-    margin: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 .btn-container-header {
@@ -57,6 +101,7 @@
 .change-form-btn {
     border: none;
     cursor: pointer;
+    background-color: white;
     width: 12rem;
     height: 4rem;
     border-radius: 2rem;
@@ -72,4 +117,123 @@
 .btn-container-subheader {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
+}
+
+/* iPad (портретный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .change-form-btn:hover {
+        background-color: white;
+        color: #1871DB;
+    }
+
+    .form-container {
+        margin-bottom: 7rem;
+    }
+}
+
+/* iPad (альбомный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .login-block, .registration-block {
+        flex: var(--form-height-on-mobile);
+    }
+
+    .btn-container {
+        display: flex;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: var(--btn-height-width-on-mobile);
+        width: 100%;
+    }
+
+    .btn-container-header {
+        display: none;
+    }
+
+    .btn-container-subheader {
+        display: none;
+    }
+
+    .form-container {
+        margin-bottom: 5rem;
+        flex-direction: column;
+    }
+
+    .slice-block {
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        height: var(--form-height-on-mobile);
+        width: 100%;
+    }
+
+    .slice-block.left {
+        animation: goUp .4s ease-out forwards;
+    }
+
+    .slice-block.right {
+        animation: goDown .4s ease-out forwards;
+    }
+
+    @keyframes goUp {
+        0% {
+            top: var(--btn-height-width-on-mobile);
+            height: var(--form-height-on-mobile);
+        }
+
+        50% {
+            top: 0;
+            height: 100%;
+        }
+
+        100% {
+            top: 0;
+            height: var(--form-height-on-mobile);
+        }
+    }
+
+    @keyframes goDown {
+        0% {
+            top: 0;
+            height: var(--form-height-on-mobile);
+        }
+
+        50% {
+            height: 100%;
+            top: 0;
+        }
+
+        100% {
+            top: var(--btn-height-width-on-mobile);
+            height: var(--form-height-on-mobile);
+        }
+    }
+
+    .change-form-btn {
+        background-color: transparent;
+        width: auto;
+        height: 2rem;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+        color: white;
+        text-decoration: underline;
+        font-weight: lighter;
+        font-size: larger;
+    }
+
+    .change-form-btn:hover {
+        background-color: transparent;
+    }
+}
+
+/* iPhone (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 926px) and (-webkit-min-device-pixel-ratio: 2) {
+
 }

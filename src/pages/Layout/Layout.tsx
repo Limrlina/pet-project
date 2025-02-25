@@ -3,14 +3,12 @@ import Header from "../../components/Header/Header.tsx";
 import styles from "./Layout.module.css";
 
 const Layout = () => {
-    return (
-        <>
-            <Header />
-            <main className={styles.container}>
-                <Outlet />
-            </main>
-        </>
-    )
+  return (
+    <div className={styles.container}>
+      <Header />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Layout;
