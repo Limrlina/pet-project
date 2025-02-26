@@ -1,0 +1,44 @@
+.card {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    aspect-ratio: 10 / 11;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.name-section {
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.image-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+}
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .name {
+        text-align: center;
+        font-weight: lighter;
+        font-size: 0.8rem;
+    }
+}

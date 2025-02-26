@@ -38,7 +38,7 @@ const Header = () => {
         </li>
         <li className={styles.center}>
           <Link to="/" className={`${styles.link} ${styles.logo}`}>
-            Элимканц
+            Скрепочка
           </Link>
         </li>
         <li className={styles.right}>
