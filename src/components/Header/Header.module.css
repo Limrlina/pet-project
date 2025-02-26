@@ -57,17 +57,12 @@
     }
 
     .left {
-        justify-content: start;
-        padding-left: 0.7rem;
     }
 
     .right {
-        justify-content: end;
-        padding-right: 0.7rem;
     }
 
     .center {
-        justify-content: center;
     }
 
     .element {

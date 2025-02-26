@@ -31,6 +31,7 @@
     text-transform: uppercase;
     transition: font-size .3s ease-out;
     text-decoration: underline;
+    color: black;
 }
 
 .list-item.selected {
@@ -67,11 +68,11 @@
     .list {
         width: 100%;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0;
     }
 
     .list-item {
-        font-size: 0.5rem;
+        font-size: 0.65rem;
     }
 
     .list-item.selected {
