@@ -55,7 +55,7 @@ const Catalog = () => {
           </li>
         </ul>
       </nav>
-      <div className={styles["selected-section"]}>{addSelectedSection()}</div>
+      {addSelectedSection()}
     </div>
   );
 };

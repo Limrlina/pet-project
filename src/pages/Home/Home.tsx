@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import clsx from "clsx";
+import SalesContainer from "../../components/SalesContainer/SalesContainer.tsx";
 
 const Home = () => {
   return (
@@ -14,17 +14,9 @@ const Home = () => {
           для офиса и школы
         </p>
       </div>
-      <div className={styles["sales-container"]}>
-        <div className={clsx(styles["sale-banner"], styles["up-left"])}></div>
-        <div className={clsx(styles["sale-banner"], styles["down-left"])}></div>
 
-        <div className={clsx(styles["sale-banner"], styles["main"])}></div>
+      <SalesContainer />
 
-        <div className={clsx(styles["sale-banner"], styles["up-right"])}></div>
-        <div
-          className={clsx(styles["sale-banner"], styles["down-right"])}
-        ></div>
-      </div>
       <div className={styles["join-btn-container"]}>
         <button className={styles["join-btn"]}>Стать нашим клиентом</button>
       </div>
