@@ -1,6 +1,6 @@
 .navbar {
     border-bottom: 0.05rem solid black;
-    flex: 0 0 10%;
+    height: 10%;
 }
 
 .navbar > ul {

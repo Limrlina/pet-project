@@ -44,3 +44,10 @@
 .form-submit-btn:hover {
     font-size: 1.1rem;
 }
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .form-submit-btn {
+        width: 50%;
+    }
+}
