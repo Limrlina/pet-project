@@ -6,8 +6,12 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles["hero-container"]}>
         <p className={styles.hero}>
-          {"Мы — оптовый поставщик \n канцелярских" +
-            "и сопутствующих товаров \n для офиса и школы"}
+          Мы — оптовый{" "}
+          <span className={styles["highlight-blue"]}>поставщик</span> <br />
+          <span className={styles["highlight-pink"]}>канцелярских</span> и
+          сопутствующих{" "}
+          <span className={styles["highlight-pink"]}>товаров</span> <br />
+          для офиса и школы
         </p>
       </div>
       <div className={styles["sales-container"]}>
@@ -22,7 +26,7 @@ const Home = () => {
         ></div>
       </div>
       <div className={styles["join-btn-container"]}>
-        <button>Стать нашим клиентом</button>
+        <button className={styles["join-btn"]}>Стать нашим клиентом</button>
       </div>
     </div>
   );

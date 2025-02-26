@@ -37,6 +37,17 @@
     text-transform: uppercase;
     font-size: 2.5rem;
     font-family: 'Lepka', sans-serif;
+    animation: appearLogo 1s ease-out forwards;
+}
+
+@keyframes appearLogo {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: #DB17A1;
+    }
 }
 
 @media only screen and (orientation: portrait) and (max-device-height: 932px) {

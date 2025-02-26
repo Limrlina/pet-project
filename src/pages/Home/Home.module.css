@@ -17,8 +17,16 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: lighter;
-    white-space: pre-wrap;
+}
 
+.highlight-blue {
+    background-color: rgba(39, 128, 245, 0.2);
+    padding: .1rem .3rem;
+}
+
+.highlight-pink {
+    background-color: rgba(219, 24, 161, 0.2);
+    padding: .1rem .3rem;
 }
 
 .sales-container {
@@ -32,6 +40,7 @@
 .sale-banner {
     aspect-ratio: 3 / 2;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .join-btn-container {
@@ -40,6 +49,22 @@
     align-items: center;
     flex-grow: 2;
     width: 100%;
+}
+
+.join-btn {
+    width: 16rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #DB17A1;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color .1s ease-out;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background-color: #b11283;
 }
 
 .up-left {
