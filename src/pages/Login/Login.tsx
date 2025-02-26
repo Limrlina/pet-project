@@ -1,9 +1,9 @@
 import styles from "./Login.module.css";
 import { useEffect, useState } from "react";
-import LoginForm from "../../components/LoginForm/LoginForm.tsx";
-import RegisterForm from "../../components/RegisterForm/RegisterForm.tsx";
 import clsx from "clsx";
 import { useAuth } from "../../contexts/AuthContext.tsx";
+import LoginForm from "../../components/forms/LoginForm/LoginForm.tsx";
+import RegisterForm from "../../components/forms/RegisterForm/RegisterForm.tsx";
 
 const Login = () => {
   const [loginActive, setLoginActive] = useState(true);
@@ -23,18 +23,8 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles["form-container"]}>
-        <div
-          className={clsx(
-            styles["slice-block"],
-            loginActive ? styles.left : styles.right,
-          )}
-        ></div>
-        {(loginActive && (
-          <div className={styles["login-block"]}>
-            <LoginForm />
-          </div>
-        )) || (
-          <div className={styles["btn-container"]}>
+        {!loginActive && (
+          <div className={clsx(styles["btn-container"], styles["left"])}>
             <p className={styles["btn-container-header"]}>Есть аккаунт?</p>
             <button
               className={styles["change-form-btn"]}
@@ -44,12 +34,9 @@ const Login = () => {
             </button>
           </div>
         )}
-        {(!loginActive && (
-          <div className={styles["registration-block"]}>
-            <RegisterForm />
-          </div>
-        )) || (
-          <div className={styles["btn-container"]}>
+
+        {loginActive && (
+          <div className={clsx(styles["btn-container"], styles["right"])}>
             <p className={styles["btn-container-header"]}>Нет аккаунта?</p>
             <div>
               <p className={styles["btn-container-subheader"]}>
@@ -65,6 +52,15 @@ const Login = () => {
             </button>
           </div>
         )}
+
+        <div
+          className={clsx(
+            styles["slice-block"],
+            loginActive ? styles.left : styles.right,
+          )}
+        >
+          {loginActive ? <LoginForm /> : <RegisterForm />}
+        </div>
       </div>
     </div>
   );

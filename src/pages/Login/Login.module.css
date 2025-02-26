@@ -4,6 +4,9 @@
 
     --form-height-on-mobile: 90%;
     --btn-height-width-on-mobile: 10%;
+
+    --container-animation-speed: .5s;
+    --container-animation-speed-mobile: .4s;
 }
 
 .container {
@@ -20,32 +23,30 @@
     height: 30rem;
     border-radius: 3rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-    display: flex;
     overflow: hidden;
     position: relative;
 }
 
-.login-block, .registration-block {
-    flex: var(--form-width-on-desktop);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .slice-block {
-    position: absolute;
+    width: var(--form-width-on-desktop);
     background-color: white;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
     height: 100%;
     border-radius: 3rem;
+    position: absolute;
+    display: flex;
+    padding-top: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .slice-block.left {
-    animation: goLeft .7s ease-out forwards;
+    animation: goLeft var(--container-animation-speed) ease-out forwards;
 }
 
 .slice-block.right {
-    animation: goRight .7s ease-out forwards;
+    animation: goRight var(--container-animation-speed) ease-out forwards;
 }
 
 @keyframes goLeft {
@@ -55,29 +56,30 @@
     }
 
     50% {
-        left: 0;
         width: 100%;
+        left: 0;
     }
 
     100% {
         width: var(--form-width-on-desktop);
+        left: 0;
     }
 }
 
 @keyframes goRight {
     0% {
         width: var(--form-width-on-desktop);
-        left: 0;
+        left: 0
     }
 
     50% {
         width: 100%;
-        left: 0;
+        left: 0
     }
 
     100% {
-        left: var(--btn-container-width-on-desktop);
         width: var(--form-width-on-desktop);
+        left: var(--btn-container-width-on-desktop);
     }
 }
 
@@ -90,6 +92,16 @@
     justify-content: center;
     gap: 1rem;
     padding: 0 0.5rem;
+}
+
+.btn-container.left {
+    position: absolute;
+    left: 0;
+}
+
+.btn-container.right {
+    position: absolute;
+    left: var(--form-width-on-desktop);
 }
 
 .btn-container-header {
@@ -138,10 +150,6 @@
 
 /* iPhone (портретный режим) */
 @media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
-    .login-block, .registration-block {
-        flex: var(--form-height-on-mobile);
-    }
-
     .btn-container {
         display: flex;
         gap: 0;
@@ -161,8 +169,7 @@
     }
 
     .form-container {
-        margin-bottom: 5rem;
-        flex-direction: column;
+        margin-bottom: 3rem;
     }
 
     .slice-block {
@@ -173,12 +180,25 @@
         width: 100%;
     }
 
+    .btn-container.left {
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    .btn-container.right {
+        left: 0;
+        position: absolute;
+        top: var(--form-height-on-mobile);
+    }
+
+
     .slice-block.left {
-        animation: goUp .4s ease-out forwards;
+        animation: goUp var(--container-animation-speed-mobile) ease-out forwards;
     }
 
     .slice-block.right {
-        animation: goDown .4s ease-out forwards;
+        animation: goDown var(--container-animation-speed-mobile) ease-out forwards;
     }
 
     @keyframes goUp {

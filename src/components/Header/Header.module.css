@@ -14,7 +14,7 @@
 
 .navbar > ul > li {
     display: flex;
-    width: 30%;
+    width: 33%;
     align-items: center;
 }
 
@@ -39,15 +39,19 @@
     font-family: 'Lepka', sans-serif;
 }
 
-@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+@media only screen and (orientation: portrait) and (max-device-height: 932px) {
+    .navbar > ul {
+        justify-content: space-around;
+    }
+
     .left {
         justify-content: start;
-        padding-left: 2rem;
+        padding-left: 0.7rem;
     }
 
     .right {
         justify-content: end;
-        padding-right: 2rem;
+        padding-right: 0.7rem;
     }
 
     .center {
