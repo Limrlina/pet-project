@@ -94,4 +94,13 @@
         width: 100%;
         justify-content: center;
     }
+
+    .list-item {
+        font-size: 0.8rem;
+    }
+
+    .list-item.selected {
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
 }
