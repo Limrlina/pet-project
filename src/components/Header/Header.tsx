@@ -18,7 +18,7 @@ const Header = () => {
       linkTo: "/",
     },
     authenticated: {
-      text: "Кабинет",
+      text: "Выйти",
       linkTo: "/",
     },
   };

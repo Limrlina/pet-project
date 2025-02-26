@@ -1,6 +1,7 @@
 .navbar {
     border-bottom: 0.05rem solid black;
     height: 10%;
+    width: 100%;
 }
 
 .navbar > ul {

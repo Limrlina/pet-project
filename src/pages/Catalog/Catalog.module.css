@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.navbar {
+    width: 100%;
+    height: 8rem;
+}
+
+.list {
+    list-style-type: none;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list-item {
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: font-size .3s ease-out;
+    text-decoration: underline;
+}
+
+.list-item.selected {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.selected-section {
+    flex-grow: 1;
+}
+
+/* iPad (портретный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .container {
+        width: 90%;
+    }
+
+    .list {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        height: 5rem;
+    }
+
+    .list {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .list-item {
+        font-size: 0.5rem;
+    }
+
+    .list-item.selected {
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}
+
+/* iPhone (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 932px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        height: 5rem;
+    }
+
+    .list {
+        width: 100%;
+        justify-content: center;
+    }
+}
