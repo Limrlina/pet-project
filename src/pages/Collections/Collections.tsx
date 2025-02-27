@@ -1,5 +1,5 @@
 import styles from "./Collections.module.css";
-import SalesContainer from "../SalesHomeContainer/SalesHomeContainer.tsx";
+import SalesContainer from "../../components/SalesHomeContainer/SalesHomeContainer.tsx";
 
 const Collections = () => {
   return (

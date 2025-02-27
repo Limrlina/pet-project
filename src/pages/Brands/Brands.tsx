@@ -1,4 +1,4 @@
-import SectionCards from "../SectionCards/SectionCards.tsx";
+import SectionCards from "../../components/SectionCards/SectionCards.tsx";
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient.ts";
 import { Database } from "../../../database.types.ts";

@@ -1,61 +1,51 @@
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styles from "./Catalog.module.css";
-import { useState } from "react";
-import Sections from "../../components/Sections/Sections.tsx";
-import Brands from "../../components/Brands/Brands.tsx";
-import Collections from "../../components/Collections/Collections.tsx";
 import clsx from "clsx";
 
 const Catalog = () => {
-  const [selectedSection, setSelectedSection] = useState<
-    "sections" | "brands" | "collections"
-  >("sections");
-
-  const addSelectedSection = () => {
-    if (selectedSection === "sections") return <Sections />;
-    if (selectedSection === "brands") return <Brands />;
-    return <Collections />;
-  };
+  const location = useLocation();
 
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
         <ul className={styles.list}>
           <li>
-            <button
-              onClick={() => setSelectedSection("sections")}
+            <Link
+              to="/catalog/sections"
               className={clsx(
                 styles["list-item"],
-                selectedSection === "sections" && styles["selected"],
+                location.pathname === "/catalog/sections" && styles["selected"],
               )}
             >
               Каталог товаров
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => setSelectedSection("brands")}
+            <Link
+              to="/catalog/brands"
               className={clsx(
                 styles["list-item"],
-                selectedSection === "brands" && styles["selected"],
+                location.pathname === "/catalog/brands" && styles["selected"],
               )}
             >
               Бренды
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => setSelectedSection("collections")}
+            <Link
+              to="/catalog/collections"
               className={clsx(
                 styles["list-item"],
-                selectedSection === "collections" && styles["selected"],
+                location.pathname === "/catalog/collections" &&
+                  styles["selected"],
               )}
             >
               Подборки товаров
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>
-      {addSelectedSection()}
+      <Outlet />
     </div>
   );
 };
