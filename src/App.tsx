@@ -9,6 +9,7 @@ import { AuthProvider } from "./contexts/AuthContext.tsx";
 import Sections from "./pages/Sections/Sections.tsx";
 import Brands from "./pages/Brands/Brands.tsx";
 import Collections from "./pages/Collections/Collections.tsx";
+import Products from "./pages/Products/Products.tsx";
 
 function App() {
   return (
@@ -23,7 +24,12 @@ function App() {
             />
             <Route path="/catalog" element={<Catalog />}>
               <Route path="sections" element={<Sections />} />
+              <Route
+                path="sections/:id"
+                element={<Products type="sections" />}
+              />
               <Route path="brands" element={<Brands />} />
+              <Route path="brands/:id" element={<Products type="brands" />} />
               <Route path="collections" element={<Collections />} />
               <Route path="*" element={<Sections />} />
             </Route>

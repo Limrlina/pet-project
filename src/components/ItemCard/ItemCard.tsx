@@ -3,18 +3,25 @@ import styles from "./ItemCard.module.css";
 export interface ItemCardType {
   name: string;
   image: string;
-  brand: string;
-  count: number;
+  brandName: string;
+  quantity: number;
   price: number;
+  id: number;
 }
 
-const ItemCard = ({ name, image, brand, count, price }: ItemCardType) => {
+const ItemCard = ({
+  name,
+  image,
+  brandName,
+  quantity,
+  price,
+}: ItemCardType) => {
   return (
     <div className={styles.card}>
       <img src={image} alt={name} />
       <p>{name}</p>
-      <p>{brand}</p>
-      <p>{count}</p>
+      <p>{brandName}</p>
+      <p>{quantity}</p>
       <p>{price}</p>
     </div>
   );

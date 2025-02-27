@@ -128,7 +128,7 @@ export type Database = {
         Row: {
           brand_id: number
           id: number
-          image: string | null
+          image: string
           name: string
           price: number
           quantity: number
@@ -136,7 +136,7 @@ export type Database = {
         Insert: {
           brand_id: number
           id?: number
-          image?: string | null
+          image: string
           name: string
           price: number
           quantity: number
@@ -144,7 +144,7 @@ export type Database = {
         Update: {
           brand_id?: number
           id?: number
-          image?: string | null
+          image?: string
           name?: string
           price?: number
           quantity?: number

@@ -22,7 +22,7 @@ const Brands = () => {
       {brands && (
         <SectionCards
           setCards={brands.map(({ name, logo, id }) => {
-            return { image: logo, name, id };
+            return { image: logo, name, sectionId: id, sectionType: "brands" };
           })}
         />
       )}

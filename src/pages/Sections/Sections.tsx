@@ -22,7 +22,12 @@ const Sections = () => {
       {sections && (
         <SectionCards
           setCards={sections.map(({ name, image, id }) => {
-            return { name, image, id };
+            return {
+              name,
+              image,
+              sectionType: "sections",
+              sectionId: id,
+            };
           })}
         />
       )}
