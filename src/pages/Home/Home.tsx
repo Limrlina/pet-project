@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import SalesContainer from "../../components/SalesContainer/SalesContainer.tsx";
+import SalesHomeContainer from "../../components/SalesHomeContainer/SalesHomeContainer.tsx";
 
 const Home = () => {
   return (
@@ -15,7 +15,9 @@ const Home = () => {
         </p>
       </div>
 
-      <SalesContainer />
+      <div className={styles["sales-container"]}>
+        <SalesHomeContainer />
+      </div>
 
       <div className={styles["join-btn-container"]}>
         <button className={styles["join-btn"]}>Стать нашим клиентом</button>

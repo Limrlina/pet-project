@@ -101,7 +101,7 @@ export type Database = {
           },
         ]
       }
-      "main-page-banners": {
+      main_page_banners: {
         Row: {
           id: number
           id_collection: number
@@ -116,7 +116,7 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "main-page-banners_id_collection_fkey"
+            foreignKeyName: "main_page_banners_id_collection_fkey"
             columns: ["id_collection"]
             isOneToOne: false
             referencedRelation: "collections"

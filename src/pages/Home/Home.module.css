@@ -6,6 +6,13 @@
     align-items: center;
 }
 
+.sales-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-container {
     display: flex;
     justify-content: center;

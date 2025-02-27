@@ -1,5 +1,5 @@
 .sales-container {
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -7,9 +7,17 @@
 }
 
 .sale-banner {
-    aspect-ratio: 3 / 2;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.sale-img {
+    height: 100%;
+}
+
+.square {
+    display: none;
 }
 
 .up-left {
@@ -49,10 +57,6 @@
         aspect-ratio: auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-    }
-
-    .sale-banner {
-        aspect-ratio: 3 / 2;
     }
 
     .up-left {
@@ -144,6 +148,14 @@
         grid-column: 1;
         background-color: #6289FF;
         aspect-ratio: 1;
+    }
+
+    .up-left > .sale-img.default, .down-left > .sale-img.default, .up-right > .sale-img.default, .down-right > .sale-img.default {
+        display: none;
+    }
+
+    .up-left > .sale-img.square, .down-left > .sale-img.square, .up-right > .sale-img.square, .down-right > .sale-img.square {
+        display: block;
     }
 
     .down-left {
