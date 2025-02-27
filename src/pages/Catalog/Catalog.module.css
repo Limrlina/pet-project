@@ -64,12 +64,13 @@
 
     .navbar {
         height: 5rem;
+        display: flex;
+        justify-content: center;
     }
 
     .list {
-        width: 100%;
-        justify-content: center;
-        gap: 0;
+        width: 93%;
+        justify-content: space-between;
     }
 
     .list-item {
