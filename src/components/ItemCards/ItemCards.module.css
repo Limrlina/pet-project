@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* iPad (портретный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .container {
+        width: 95%;
+        
+    }
+}

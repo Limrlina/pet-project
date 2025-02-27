@@ -1,4 +1,5 @@
 import styles from "./ItemCard.module.css";
+import { Icon } from "@iconify/react";
 
 export interface ItemCardType {
   name: string;
@@ -18,11 +19,22 @@ const ItemCard = ({
 }: ItemCardType) => {
   return (
     <div className={styles.card}>
-      <img src={image} alt={name} />
-      <p>{name}</p>
-      <p>{brandName}</p>
-      <p>{quantity}</p>
-      <p>{price}</p>
+      <div className={styles["card-img-container"]}>
+        <img src={image} alt={name} className={styles["card-img"]} />
+      </div>
+      <div className={styles["card-info"]}>
+        <div className={styles["card-info-text-container"]}>
+          <p className={styles["card-name"]}>{name}</p>
+          <p className={styles["card-brand-name"]}>{brandName}</p>
+          <p
+            className={styles["card-quantity"]}
+          >{`На складе: ${quantity} шт.`}</p>
+        </div>
+        <div className={styles["card-info-price-container"]}>
+          <p className={styles["price"]}>{price}</p>
+          <Icon icon="material-symbols:currency-ruble-rounded" />
+        </div>
+      </div>
     </div>
   );
 };

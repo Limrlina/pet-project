@@ -1,0 +1,10 @@
+.info-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    font-size: 1.8rem;
+    color: #1871DB;
+    margin-bottom: 2rem;
+}

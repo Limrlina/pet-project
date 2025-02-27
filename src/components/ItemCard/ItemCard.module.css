@@ -1,0 +1,105 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    aspect-ratio: 3 / 1;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.card-img {
+    height: 100%;
+    object-fit: contain
+}
+
+.card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+
+}
+
+.card-name {
+    font-size: 1.1rem;
+}
+
+.card-brand-name {
+    color: #1871DB;
+}
+
+.card-quantity {
+    color: #676767;
+}
+
+.card-info-price-container {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* iPad (портретный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .card-info-text-container {
+        font-size: 1.2rem;
+    }
+
+    .card-name {
+        font-size: 1.5rem;
+    }
+
+    .card-info-price-container {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1300px) {
+    .card {
+        aspect-ratio: 2 / 1;
+    }
+}
+
+/* iPhone (альбомный режим) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .card {
+        aspect-ratio: 2 / 1;
+    }
+}
+
+/* iPhone (портретный режим) */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
+    .card {
+        flex-direction: column;
+        aspect-ratio: auto;
+    }
+
+    .card-img-container {
+        width: 100%;
+    }
+}
+
+/* iPhone (альбомный режим) */
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 667px) {
+    .card {
+        aspect-ratio: 3 / 2;
+    }
+}

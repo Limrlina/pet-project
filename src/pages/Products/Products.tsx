@@ -3,9 +3,11 @@ import { ItemCardType } from "../../components/ItemCard/ItemCard.tsx";
 import { supabase } from "../../supabaseClient.ts";
 import ItemCards from "../../components/ItemCards/ItemCards.tsx";
 import { useNavigate, useParams } from "react-router-dom";
+import styles from "./Products.module.css";
 
 const Products = ({ type }: { type: "brands" | "sections" }) => {
   const [products, setProducts] = useState<ItemCardType[] | []>([]);
+  const [textContinue, setTextContinue] = useState<string>("");
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -39,9 +41,7 @@ const Products = ({ type }: { type: "brands" | "sections" }) => {
           return;
         }
 
-        console.log(productsInfo.data);
-
-        console.log(brandInfo.data);
+        setTextContinue(`Товары бренда ${brandInfo.data[0].name}`);
 
         const result = productsInfo.data.map((currentProduct) => {
           return { ...currentProduct, brandName: brandInfo.data[0].name };
@@ -104,6 +104,7 @@ const Products = ({ type }: { type: "brands" | "sections" }) => {
         },
       );
 
+      setTextContinue(`${catalogSectionInfo.data[0].name}`);
       setProducts(result);
     };
 
@@ -112,6 +113,9 @@ const Products = ({ type }: { type: "brands" | "sections" }) => {
 
   return (
     <>
+      <div className={styles["info-container"]}>
+        <p>{textContinue}</p>
+      </div>
       <ItemCards setCards={products} />
     </>
   );

@@ -144,11 +144,6 @@
     }
 }
 
-/* iPad (альбомный режим) */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-
-}
-
 /* iPhone (портретный режим) */
 @media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
     .btn-container {
