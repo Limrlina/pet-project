@@ -83,6 +83,16 @@
     }
 }
 
+@media only screen and (max-device-width: 412px) {
+    .list {
+        gap: 0.5rem;
+    }
+
+    .list-item {
+        font-size: 0.7rem;
+    }
+}
+
 /* iPhone (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 932px) {
     .container {

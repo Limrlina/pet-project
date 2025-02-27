@@ -64,3 +64,9 @@
         font-size: 2rem;
     }
 }
+
+@media only screen and (max-device-width: 412px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
