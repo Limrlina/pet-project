@@ -1,4 +1,4 @@
-.form-container {
+.formContainer {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -8,22 +8,22 @@
     align-items: center;
 }
 
-.form-header {
+.formHeader {
     font-size: 2rem;
 }
 
-.form-block {
+.formBlock {
     display: flex;
     flex-direction: column;
     width: 70%;
     gap: .5rem;
 }
 
-.form-label {
+.formLabel {
     padding-left: .5rem;
 }
 
-.form-input {
+.formInput {
     width: 100%;
     height: 2.8rem;
     border-radius: 1.5rem;
@@ -39,7 +39,7 @@
     border: .1rem solid rgb(111, 207, 22);
 }
 
-.form-submit-btn {
+.formSubmitBtn {
     border-radius: 2rem;
     height: 2.8rem;
     width: 40%;
@@ -49,18 +49,18 @@
     transition: font-size 0.1s ease-out;
 }
 
-.form-submit-btn.valid-btn {
+.formSubmitBtn.validBtn {
     background-color: #1871DB;
     cursor: pointer;
 }
 
-.form-submit-btn.valid-btn:hover {
+.formSubmitBtn.validBtn:hover {
     font-size: 1.1rem;
 }
 
 /* iPhone (портретный режим) */
 @media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
-    .form-submit-btn {
+    .formSubmitBtn {
         width: 50%;
     }
 }

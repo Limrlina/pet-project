@@ -23,7 +23,7 @@
     gap: 2rem;
 }
 
-.list-item {
+.listItem {
     border: none;
     background-color: transparent;
     font-size: 0.8rem;
@@ -34,12 +34,12 @@
     color: black;
 }
 
-.list-item.selected {
+.listItem.selected {
     font-size: 1.5rem;
     text-decoration: none;
 }
 
-.selected-section {
+.selectedSection {
     width: 100%;
     flex-grow: 1;
 }
@@ -73,11 +73,11 @@
         justify-content: space-between;
     }
 
-    .list-item {
+    .listItem {
         font-size: 0.65rem;
     }
 
-    .list-item.selected {
+    .listItem.selected {
         font-size: 1rem;
         text-decoration: none;
     }
@@ -88,7 +88,7 @@
         gap: 0.5rem;
     }
 
-    .list-item {
+    .listItem {
         font-size: 0.7rem;
     }
 }
@@ -108,11 +108,11 @@
         justify-content: center;
     }
 
-    .list-item {
+    .listItem {
         font-size: 0.8rem;
     }
 
-    .list-item.selected {
+    .listItem.selected {
         font-size: 1.2rem;
         text-decoration: none;
     }

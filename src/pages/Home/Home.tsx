@@ -4,23 +4,23 @@ import SalesHomeContainer from "../../components/SalesHomeContainer/SalesHomeCon
 const Home = () => {
   return (
     <div className={styles.container}>
-      <div className={styles["hero-container"]}>
+      <div className={styles.heroContainer}>
         <p className={styles.hero}>
-          Мы — оптовый{" "}
-          <span className={styles["highlight-blue"]}>поставщик</span> <br />
-          <span className={styles["highlight-pink"]}>канцелярских</span> и
-          сопутствующих{" "}
-          <span className={styles["highlight-pink"]}>товаров</span> <br />
+          Мы — оптовый <span className={styles.highlightBlue}>поставщик</span>{" "}
+          <br />
+          <span className={styles.highlightPink}>канцелярских</span> и
+          сопутствующих <span className={styles.highlightPink}>товаров</span>{" "}
+          <br />
           для офиса и школы
         </p>
       </div>
 
-      <div className={styles["sales-container"]}>
+      <div className={styles.salesContainer}>
         <SalesHomeContainer />
       </div>
 
-      <div className={styles["join-btn-container"]}>
-        <button className={styles["join-btn"]}>Стать нашим клиентом</button>
+      <div className={styles.joinBtnContainer}>
+        <button className={styles.joinBtn}>Стать нашим клиентом</button>
       </div>
     </div>
   );

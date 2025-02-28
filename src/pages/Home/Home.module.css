@@ -6,14 +6,14 @@
     align-items: center;
 }
 
-.sales-container {
+.salesContainer {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero-container {
+.heroContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,17 +27,17 @@
     font-weight: lighter;
 }
 
-.highlight-blue {
+.highlightBlue {
     background-color: rgba(39, 128, 245, 0.2);
     padding: .1rem .3rem;
 }
 
-.highlight-pink {
+.highlightPink {
     background-color: rgba(219, 24, 161, 0.2);
     padding: .1rem .3rem;
 }
 
-.join-btn-container {
+.joinBtnContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@
     width: 100%;
 }
 
-.join-btn {
+.joinBtn {
     width: 16rem;
     height: 4rem;
     border-radius: 2rem;
@@ -57,13 +57,13 @@
     cursor: pointer;
 }
 
-.join-btn:hover {
+.joinBtn:hover {
     background-color: #b11283;
 }
 
 /* iPad (портретный режим) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .hero-container, .join-btn-container {
+    .heroContainer, .joinBtnContainer {
         padding: 0.5rem 0;
     }
 }
@@ -75,7 +75,7 @@
         padding: 1rem 0;
     }
 
-    .join-btn-container {
+    .joinBtnContainer {
         padding: 2rem 0;
     }
 }
@@ -86,7 +86,7 @@
         padding: 1rem 0;
     }
 
-    .join-btn-container {
+    .joinBtnContainer {
         padding: 2rem 0;
     }
 }

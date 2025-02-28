@@ -77,14 +77,14 @@ const Products = ({ type }: { type: "brands" | "sections" }) => {
         return;
       }
 
-      const requiredProductIds = productIdsOfCatalogSection.data
-        .map((currentProductInfo) => `"${currentProductInfo.id_product}"`)
-        .join(",");
+      const requiredProductIds = productIdsOfCatalogSection.data.map(
+        ({ id_product }) => id_product,
+      );
 
       const { data: productsInfo } = await supabase
         .from("products")
         .select()
-        .filter("id", "in", `(${requiredProductIds})`);
+        .in("id", requiredProductIds);
 
       if (!productsInfo) {
         console.log("Не нашлось товаров!");
@@ -113,7 +113,7 @@ const Products = ({ type }: { type: "brands" | "sections" }) => {
 
   return (
     <>
-      <div className={styles["info-container"]}>
+      <div className={styles.infoContainer}>
         <p>{textContinue}</p>
       </div>
       <ItemCards setCards={products} />

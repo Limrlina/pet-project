@@ -52,20 +52,20 @@ const LoginForm = () => {
 
   return (
     <>
-      <p className={formStyles["form-header"]}>Вход</p>
+      <p className={formStyles.formHeader}>Вход</p>
 
       {errorInfo.isError && (
         <div className={formStyles.errorErea}>{errorInfo.text}</div>
       )}
 
-      <form className={formStyles["form-container"]} onSubmit={handleSubmit}>
-        <div className={formStyles["form-block"]}>
-          <label htmlFor="email" className={formStyles["form-label"]}>
+      <form className={formStyles.formContainer} onSubmit={handleSubmit}>
+        <div className={formStyles.formBlock}>
+          <label htmlFor="email" className={formStyles.formLabel}>
             Адрес электронной почты
           </label>
           <input
             className={clsx(
-              formStyles["form-input"],
+              formStyles.formInput,
               emailIsValid === false && formStyles.notValidInput,
               emailIsValid && formStyles.ValidInput,
             )}
@@ -77,13 +77,13 @@ const LoginForm = () => {
           />
         </div>
 
-        <div className={formStyles["form-block"]}>
-          <label htmlFor="password" className={formStyles["form-label"]}>
+        <div className={formStyles.formBlock}>
+          <label htmlFor="password" className={formStyles.formLabel}>
             Пароль
           </label>
           <input
             className={clsx(
-              formStyles["form-input"],
+              formStyles.formInput,
               passwordIsValid === false && formStyles.notValidInput,
               passwordIsValid && formStyles.ValidInput,
             )}
@@ -97,8 +97,8 @@ const LoginForm = () => {
         <button
           type="submit"
           className={clsx(
-            formStyles["form-submit-btn"],
-            emailIsValid && passwordIsValid && formStyles["valid-btn"],
+            formStyles.formSubmitBtn,
+            emailIsValid && passwordIsValid && formStyles.validBtn,
           )}
           disabled={!emailIsValid && !passwordIsValid}
         >

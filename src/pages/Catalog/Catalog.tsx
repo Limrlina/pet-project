@@ -13,8 +13,8 @@ const Catalog = () => {
             <Link
               to="/catalog/sections"
               className={clsx(
-                styles["list-item"],
-                location.pathname === "/catalog/sections" && styles["selected"],
+                styles.listItem,
+                location.pathname === "/catalog/sections" && styles.selected,
               )}
             >
               Каталог товаров
@@ -24,8 +24,8 @@ const Catalog = () => {
             <Link
               to="/catalog/brands"
               className={clsx(
-                styles["list-item"],
-                location.pathname === "/catalog/brands" && styles["selected"],
+                styles.listItem,
+                location.pathname === "/catalog/brands" && styles.selected,
               )}
             >
               Бренды
@@ -35,9 +35,8 @@ const Catalog = () => {
             <Link
               to="/catalog/collections"
               className={clsx(
-                styles["list-item"],
-                location.pathname === "/catalog/collections" &&
-                  styles["selected"],
+                styles.listItem,
+                location.pathname === "/catalog/collections" && styles.selected,
               )}
             >
               Подборки товаров

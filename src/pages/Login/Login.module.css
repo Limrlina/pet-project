@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.form-container {
+.formContainer {
     margin: 1rem;
     background-color: #1871DB;
     width: 50rem;
@@ -28,7 +28,7 @@
     position: relative;
 }
 
-.slice-block {
+.sliceBlock {
     width: var(--form-width-on-desktop);
     background-color: white;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -42,11 +42,11 @@
     align-items: center;
 }
 
-.slice-block.left {
+.sliceBlock.left {
     animation: goLeft var(--container-animation-speed) ease-out forwards;
 }
 
-.slice-block.right {
+.sliceBlock.right {
     animation: goRight var(--container-animation-speed) ease-out forwards;
 }
 
@@ -84,7 +84,7 @@
     }
 }
 
-.btn-container {
+.btnContainer {
     width: var(--btn-container-width-on-desktop);
     height: 100%;
     display: flex;
@@ -95,23 +95,23 @@
     padding: 0 0.5rem;
 }
 
-.btn-container.left {
+.btnContainer.left {
     position: absolute;
     left: 0;
 }
 
-.btn-container.right {
+.btnContainer.right {
     position: absolute;
     left: var(--form-width-on-desktop);
 }
 
-.btn-container-header {
+.btnContainerHeader {
     font-size: 1.2rem;
     color: white;
     text-transform: uppercase;
 }
 
-.change-form-btn {
+.changeFormBtn {
     border: none;
     cursor: pointer;
     background-color: white;
@@ -122,31 +122,31 @@
     transition: background-color .2s ease-out, color .1s ease-out;
 }
 
-.change-form-btn:hover {
+.changeFormBtn:hover {
     background-color: #DB17A1;
     color: white;
 }
 
-.btn-container-subheader {
+.btnContainerSubheader {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
 }
 
 /* iPad (портретный режим) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .change-form-btn:hover {
+    .changeFormBtn:hover {
         background-color: white;
         color: #1871DB;
     }
 
-    .form-container {
+    .formContainer {
         margin-bottom: 7rem;
     }
 }
 
 /* iPhone (портретный режим) */
 @media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-height: 932px) {
-    .btn-container {
+    .btnContainer {
         display: flex;
         gap: 0;
         align-items: center;
@@ -156,20 +156,20 @@
         width: 100%;
     }
 
-    .btn-container-header {
+    .btnContainerHeader {
         display: none;
     }
 
-    .btn-container-subheader {
+    .btnContainerSubheader {
         display: none;
     }
 
-    .form-container {
+    .formContainer {
         margin-bottom: 3rem;
         height: 35rem;
     }
 
-    .slice-block {
+    .sliceBlock {
         position: absolute;
         background-color: white;
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -177,24 +177,24 @@
         width: 100%;
     }
 
-    .btn-container.left {
+    .btnContainer.left {
         left: 0;
         position: absolute;
         top: 0;
     }
 
-    .btn-container.right {
+    .btnContainer.right {
         left: 0;
         position: absolute;
         top: var(--form-height-on-mobile);
     }
 
 
-    .slice-block.left {
+    .sliceBlock.left {
         animation: goUp var(--container-animation-speed-mobile) ease-out forwards;
     }
 
-    .slice-block.right {
+    .sliceBlock.right {
         animation: goDown var(--container-animation-speed-mobile) ease-out forwards;
     }
 
@@ -232,7 +232,7 @@
         }
     }
 
-    .change-form-btn {
+    .changeFormBtn {
         background-color: transparent;
         width: auto;
         height: 2rem;
@@ -245,20 +245,20 @@
         font-size: larger;
     }
 
-    .change-form-btn:hover {
+    .changeFormBtn:hover {
         background-color: transparent;
     }
 }
 
 /* iPhone (альбомный режим) */
 @media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 926px) {
-    .form-container {
+    .formContainer {
         width: 40rem;
         height: 20rem;
         font-size: 1rem;
     }
 
-    .change-form-btn {
+    .changeFormBtn {
         width: 80%;
     }
 }

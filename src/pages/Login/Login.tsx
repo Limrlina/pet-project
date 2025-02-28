@@ -16,12 +16,12 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles["form-container"]}>
+      <div className={styles.formContainer}>
         {!loginActive && (
-          <div className={clsx(styles["btn-container"], styles["left"])}>
-            <p className={styles["btn-container-header"]}>Есть аккаунт?</p>
+          <div className={clsx(styles.btnContainer, styles.left)}>
+            <p className={styles.btnContainerHeader}>Есть аккаунт?</p>
             <button
-              className={styles["change-form-btn"]}
+              className={styles.changeFormBtn}
               onClick={() => setLoginActive(!loginActive)}
             >
               Войти
@@ -30,16 +30,16 @@ const Login = () => {
         )}
 
         {loginActive && (
-          <div className={clsx(styles["btn-container"], styles["right"])}>
-            <p className={styles["btn-container-header"]}>Нет аккаунта?</p>
+          <div className={clsx(styles.btnContainer, styles.right)}>
+            <p className={styles.btnContainerHeader}>Нет аккаунта?</p>
             <div>
-              <p className={styles["btn-container-subheader"]}>
+              <p className={styles.btnContainerSubheader}>
                 Зарегистрируйтесь, чтобы получить возможность оформлять заказы
                 на нашем сайте!
               </p>
             </div>
             <button
-              className={styles["change-form-btn"]}
+              className={styles.changeFormBtn}
               onClick={() => setLoginActive(!loginActive)}
             >
               Зарегистрироваться
@@ -49,7 +49,7 @@ const Login = () => {
 
         <div
           className={clsx(
-            styles["slice-block"],
+            styles.sliceBlock,
             loginActive ? styles.left : styles.right,
           )}
         >

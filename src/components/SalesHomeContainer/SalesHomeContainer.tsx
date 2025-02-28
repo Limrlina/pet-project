@@ -63,30 +63,27 @@ const SalesHomeContainer = () => {
 
   const bannersPlacement = [
     "main",
-    "up-left",
-    "down-left",
-    "up-right",
-    "down-right",
+    "upLeft",
+    "downLeft",
+    "upRight",
+    "downRight",
   ];
 
   return (
-    <div className={styles["sales-container"]}>
+    <div className={styles.salesContainer}>
       {banners.map((currentBanner, index) => {
         return (
           <div
-            className={clsx(
-              styles["sale-banner"],
-              styles[bannersPlacement[index]],
-            )}
+            className={clsx(styles.saleBanner, styles[bannersPlacement[index]])}
             key={currentBanner.bannerId}
           >
             <img
-              className={clsx(styles["sale-img"], styles["default"])}
+              className={clsx(styles.saleImg, styles.default)}
               src={currentBanner.defaultImageSale}
               alt={currentBanner.nameSale}
             />
             <img
-              className={clsx(styles["sale-img"], styles["square"])}
+              className={clsx(styles.saleImg, styles.square)}
               src={currentBanner.squareImageSale}
               alt={currentBanner.nameSale}
             />

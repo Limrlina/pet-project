@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.name-section {
+.nameSection {
     display: flex;
     height: 20%;
     flex-direction: column;
@@ -29,7 +29,7 @@
     font-size: 1.2rem;
 }
 
-.image-section {
+.imageSection {
     flex-grow: 1;
     display: flex;
     justify-content: center;

@@ -10,46 +10,45 @@
     gap: 1rem;
 }
 
-.card-img-container {
+.cardImgContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
 }
 
-.card-img {
+.cardImg {
     height: 100%;
     object-fit: contain
 }
 
-.card-info {
+.cardInfo {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-info-text-container {
+.cardInfoTextContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: .5rem;
-
 }
 
-.card-name {
+.cardName {
     font-size: 1.1rem;
 }
 
-.card-brand-name {
+.cardBrandName {
     color: #1871DB;
 }
 
-.card-quantity {
+.cardQuantity {
     color: #676767;
 }
 
-.card-info-price-container {
+.cardInfoPriceContainer {
     font-weight: bold;
     font-size: 1.2rem;
     display: flex;
@@ -59,15 +58,15 @@
 
 /* iPad (портретный режим) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .card-info-text-container {
+    .cardInfoTextContainer {
         font-size: 1.2rem;
     }
 
-    .card-name {
+    .cardName {
         font-size: 1.5rem;
     }
 
-    .card-info-price-container {
+    .cardInfoPriceContainer {
         font-size: 1.5rem;
     }
 }
@@ -92,7 +91,7 @@
         aspect-ratio: auto;
     }
 
-    .card-img-container {
+    .cardImgContainer {
         width: 100%;
     }
 }

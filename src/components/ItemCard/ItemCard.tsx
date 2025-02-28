@@ -10,28 +10,21 @@ export interface ItemCardType {
   id: number;
 }
 
-const ItemCard = ({
-  name,
-  image,
-  brandName,
-  quantity,
-  price,
-}: ItemCardType) => {
+const ItemCard = ({ cardInfo }: { cardInfo: ItemCardType }) => {
+  const { name, image, brandName, quantity, price } = cardInfo;
   return (
     <div className={styles.card}>
-      <div className={styles["card-img-container"]}>
-        <img src={image} alt={name} className={styles["card-img"]} />
+      <div className={styles.cardImgContainer}>
+        <img src={image} alt={name} className={styles.cardImg} />
       </div>
-      <div className={styles["card-info"]}>
-        <div className={styles["card-info-text-container"]}>
-          <p className={styles["card-name"]}>{name}</p>
-          <p className={styles["card-brand-name"]}>{brandName}</p>
-          <p
-            className={styles["card-quantity"]}
-          >{`На складе: ${quantity} шт.`}</p>
+      <div className={styles.cardInfo}>
+        <div className={styles.cardInfoTextContainer}>
+          <p className={styles.cardName}>{name}</p>
+          <p className={styles.cardBrandName}>{brandName}</p>
+          <p className={styles.cardQuantity}>{`На складе: ${quantity} шт.`}</p>
         </div>
-        <div className={styles["card-info-price-container"]}>
-          <p className={styles["price"]}>{price}</p>
+        <div className={styles.cardInfoPriceContainer}>
+          <p className={styles.price}>{price}</p>
           <Icon icon="material-symbols:currency-ruble-rounded" />
         </div>
       </div>

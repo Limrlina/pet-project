@@ -9,20 +9,16 @@ export interface SectionCardType {
   sectionId: number;
 }
 
-const SectionCard = ({
-  name,
-  image,
-  sectionType,
-  sectionId,
-}: SectionCardType) => {
+const SectionCard = ({ cardInfo }: { cardInfo: SectionCardType }) => {
+  const { name, image, sectionType, sectionId } = cardInfo;
   return (
     <Link to={`/catalog/${sectionType}/${sectionId}`} className={styles.link}>
       <div className={clsx(styles.card)}>
-        <div className={styles["name-section"]}>
-          <p className={styles["name"]}>{name}</p>
+        <div className={styles.nameSection}>
+          <p className={styles.name}>{name}</p>
         </div>
-        <div className={styles["image-section"]}>
-          <img src={image} alt={name} className={styles["image"]} />
+        <div className={styles.imageSection}>
+          <img src={image} alt={name} className={styles.image} />
         </div>
       </div>
     </Link>
