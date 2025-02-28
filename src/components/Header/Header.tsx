@@ -1,32 +1,23 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { useAuth } from "../../contexts/AuthContext.tsx";
-import { useEffect, useState } from "react";
+
+const statusProps = {
+  unauthenticated: {
+    text: "Войти",
+    linkTo: "/login",
+  },
+  authenticated: {
+    text: "Выйти",
+    linkTo: "/",
+  },
+};
 
 const Header = () => {
-  const [buttonText, setButtonText] = useState("Войти");
-  const [buttonPath, setButtonPath] = useState("/");
   const { status } = useAuth();
 
-  const statusProps = {
-    unauthenticated: {
-      text: "Войти",
-      linkTo: "/login",
-    },
-    "signing-in": {
-      text: "Назад",
-      linkTo: "/",
-    },
-    authenticated: {
-      text: "Выйти",
-      linkTo: "/",
-    },
-  };
-
-  useEffect(() => {
-    setButtonText(statusProps[status].text);
-    setButtonPath(statusProps[status].linkTo);
-  }, [status]);
+  console.log({ status });
+  const { text: buttonText, linkTo: buttonPath } = statusProps[status];
 
   return (
     <nav className={styles.navbar}>

@@ -31,17 +31,30 @@
     padding: 0 0.8rem;
 }
 
+.notValidInput {
+    border: .1rem solid rgba(255, 0, 0);
+}
+
+.ValidInput {
+    border: .1rem solid rgb(111, 207, 22);
+}
+
 .form-submit-btn {
     border-radius: 2rem;
     height: 2.8rem;
     width: 40%;
     border: none;
-    background-color: #1871DB;
+    background-color: rgba(24, 113, 219, 0.5);
     color: white;
     transition: font-size 0.1s ease-out;
 }
 
-.form-submit-btn:hover {
+.form-submit-btn.valid-btn {
+    background-color: #1871DB;
+    cursor: pointer;
+}
+
+.form-submit-btn.valid-btn:hover {
     font-size: 1.1rem;
 }
 

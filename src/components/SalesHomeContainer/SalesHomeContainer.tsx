@@ -24,14 +24,14 @@ const SalesHomeContainer = () => {
         return;
       }
 
-      const requiredCollectionIds: string = bannersData
-        .map((currentBanner) => `"${currentBanner.id_collection}"`)
-        .join(",");
+      const requiredCollectionIds: number[] = bannersData.map(
+        ({ id_collection }) => id_collection,
+      );
 
       const { data: collectionsData } = await supabase
         .from("collections")
         .select("id, name, banner_default, banner_mobile")
-        .filter("id", "in", `(${requiredCollectionIds})`);
+        .in("id", requiredCollectionIds);
 
       if (!collectionsData) throw new Error("Collections not defined!");
 

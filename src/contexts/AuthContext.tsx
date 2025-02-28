@@ -1,6 +1,6 @@
 import { createContext, PropsWithChildren, useContext, useState } from "react";
 
-export type AuthStatus = "unauthenticated" | "signing-in" | "authenticated";
+export type AuthStatus = "unauthenticated" | "authenticated";
 
 interface AuthContextType {
   status: AuthStatus;
